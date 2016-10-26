@@ -5,8 +5,174 @@
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
-
+    <header class="main-header">
+      <div class="container">
+        <div class="header-logo">
+          <a><img src="img/nerds-logo.png" alt="Nerds" width="160" height="65"></a>
+        </div>
+        <nav class="main-navigation">
+          <ul>
+            <li><a href="#">Студия</a></li>
+            <li><a href="#">Клиенты</a></li>
+            <li><a href="#">Магазин</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="user-block">
+          <a class="cart" href="#">Корзина</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="slider">
+          <div class="slide">
+            <h2>Долго, дорого, скрупулезно.</h2>
+            <p>Математически выверенный дизайн для вашего сайта или мобильного приложения.</p>
+            <a class="slider-btn" href="#">Узнать больше</a>
+          </div>
+          <div class="slide">
+            <h2>Любим математику как никто другой</h2>
+            <p>Никакого креатива, только математические формулы для расчета идеальных пропорций.</p>
+            <a class="slider-btn" href="#">Узнать больше</a>
+          </div>
+          <div class="slide">
+            <h2>Только ночь, только хардкор</h2>
+            <p>Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</p>
+            <a class="slider-btn" href="#">Узнать больше</a>
+          </div>
+          <!-- Как все правильно скомпоновать? -->
+          <!-- И да, здесь же fieldset не нужен? Я про него помню!  -->
+          <div class="slider-controls">
+            <label for="controller-1"></label>
+            <input type="radio" name="controller" id="controller-1" checked>
+            <label for="controller-2"></label>
+            <input type="radio" name="controller" id="controller-2">
+            <label for="controller-3"></label>
+            <input type="radio" name="controller" id="controller-3">
+          </div>
+        </div>
+        <div class="advantages">
+          <div class="advantages-item">
+            <figure class="advantages-illustration">
+              <img src="img/illustration-1.jpg" alt="Веб-сайты" width="300" height="146">
+            </figure>
+            <h3>Веб-сайты</h3>
+            <p>Мир никогда не будет прежним после того, как увидит ваш сайт!</p>
+            <a class="advantages-btn advantages-btn-pink" href="#">Заказать</a>
+          </div>
+          <div class="advantages-item">
+            <figure class="advantages-illustration">
+              <img src="img/illustration-2.jpg" alt="Приложения" width="300" height="146">
+            </figure>
+            <h3>Приложения</h3>
+            <p>Покорите топ-10 приложений в AppStore и GooglePlay</p>
+            <a class="advantages-btn advantages-btn-green" href="#">Заказать</a>
+          </div>
+          <div class="advantages-item">
+            <figure class="advantages-illustration">
+              <img src="img/illustration-3.jpg" alt="Презентации" width="300" height="146">
+            </figure>
+            <h3>Презентации</h3>
+            <p>Вы даже не подозреваете, насколько вы изумительны!</p>
+            <a class="advantages-btn advantages-btn-blue" href="#">Заказать</a>
+          </div>
+        </div>
+        <!-- Дальше ужасная вложенность!
+        Как вариант: могу убрать блок "studio" и отдельно оставить два вложенных в него блока -->
+        <div class="studio">
+          <div class="studio-description">
+            <h1>Мы &mdash; маленькая, но гордая дизайн-студия из Краснодара.</h1>
+            <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
+            <!-- Декоративное изображение? После долгих размышлений решила, что да, закомментировала -->
+            <!-- <figure class="nerds-illustration">
+              <img src="img/nerds-illustration.jpg" alt="Nerds" width="360" height="208">
+            </figure> -->
+          </div>
+          <div class="studio-row">
+            <div class="studio-block-left">
+              <p class="list-title">Выполняем заказы на разработку:</p>
+              <ul>
+                <li>Веб-сайтов любой сложности</li>
+                <li>Мобильных приложений для iOS и Android</li>
+                <li>Слайдшоу и видео для корпоративных презентаций</li>
+              </ul>
+            </div>
+            <div class="studio-block-right">
+              <p>С 2014 года любим точность во всем:</p>
+              <div class="studio-block-right-item">
+                <span>146%</span>
+                Уровень самоотдачи
+              </div>
+              <div class="studio-block-right-item">
+                <span>100%</span>
+                Соблюдение сроков
+              </div>
+              <div class="studio-block-right-item">
+                <span>50%</span>
+                Минимальная предоплата
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clients">
+          <figure class="clients-item">
+            <img src="img/logo-1.png" alt="HTML Academy" width="199" height="68">
+          </figure>
+          <figure class="clients-item">
+            <img src="img/logo-2.png" alt="Barbershop Borodinsky" width="209" height="90">
+          </figure>
+          <figure class="clients-item">
+            <img src="img/logo-3.png" alt="Pink" width="185" height="52">
+          </figure>
+          <figure class="clients-item">
+            <img src="img/logo-4.png" alt="Mishka" width="173" height="84">
+          </figure>
+        </div>
+        <div class="map">
+          <!-- Карта тоже интерактивная?
+          Маркер пока не трогала, только в папку img добавила. И карту туда же :) -->
+          <div class="contacts">
+            <p class="contacts-title">NЁRDS DESIGN STUDIO</p>
+            <p>191186, Санкт-Петербург,  ул. Б. Конюшенная, д. 19/8</p>
+            <p>тел. +7 (812) 275-75-75</p>
+            <a class="contacts-btn" href="#">Напишите нам</a>
+          </div>
+          <div class="write-us-form">
+            <!-- Закрывающий попап крестик -->
+            <a class="close-btn" href="#"></a>
+            <h2>Напишите нам</h2>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <fieldset class="write-us-form write-us-form-half">
+                <label for="your-name">Ваше имя:</label>
+                <input type="text" name="your-name" id="your-name" value="Представьтесь, пожалуйста">
+              </fieldset>
+              <fieldset class="write-us-form write-us-form-half">
+                <label for="your-email">Ваш e-mail:</label>
+                <input type="text" name="your-email" id="your-email" value="Для отправки ответа">
+              </fieldset>
+              <fieldset class="write-us-form">
+                <label for="letter-text">Текст письма:</label>
+                <textarea name="letter-text" id="letter-text" rows="4">В свободной форме</textarea>
+              </fieldset>
+              <a class="sent-btn" href="#">Отправить</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-social">
+          <a class="social-btn social-btn-vk" href="#">VK</a>
+          <a class="social-btn social-btn-fb" href="#">Facebook</a>
+          <a class="social-btn social-btn-inst" href="#">Instagram</a>
+        </div>
+        <div class="footer-social-discount">
+          <h3>Давайте дружить, это выгодно!</h3>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
